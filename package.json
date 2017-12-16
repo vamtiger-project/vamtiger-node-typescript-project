@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.0.11",
+  "version": "0.0.12-0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
@@ -21,6 +21,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.0.6",
+    "@types/js-beautify": "^0.0.31",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.53",
     "chai": "^4.1.2",
@@ -30,9 +31,7 @@
     "vamtiger-node-typescript-commit": "^0.0.50"
   },
   "dependencies": {
-    "@types/js-beautify": "^0.0.31",
     "js-beautify": "^1.7.5",
-    "npm": "^5.6.0",
     "vamtiger-bash": "^0.0.16",
     "vamtiger-create-directory": "0.0.3",
     "vamtiger-create-file": "^0.0.7"
