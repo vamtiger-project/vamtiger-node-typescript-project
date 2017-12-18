@@ -1,6 +1,7 @@
-import { resolve as resolvePath } from 'path';
+import { resolve as resolvePath, basename } from 'path';
 import createDirectory from 'vamtiger-create-directory';
 import createFile from 'vamtiger-create-file';
+import copyFile from 'vamtiger-copy-file';
 import initializeRepository from './initialize-repository';
 import initializePackage from './initialize-package';
 import updatePackage from './update-package';
@@ -25,6 +26,19 @@ export default async () => {
         workingDirectory,
         'package.json'
     );
+    const tsconfigSource = resolvePath(
+        __dirname,
+        '..',
+        'tsconfig.json'
+    );
+    const tsconfigDestination = resolvePath(
+        workingDirectory,
+        basename(tsconfigSource)
+    );
+    const tsconfig = {
+        source: tsconfigSource,
+        destination: tsconfigDestination
+    };
 
     await createDirectory(sourceFolder);
 
@@ -36,7 +50,8 @@ export default async () => {
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),
         createFile(main, ''),
-        installDependecies({ workingDirectory })
+        installDependecies({ workingDirectory }),
+        copyFile(tsconfig)
     ]);
 
     return true;

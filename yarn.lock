@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@types/chai@^4.0.4", "@types/chai@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.6.tgz#9cb5a7fb7dd83be0cfcaafdbd95a2b5dd351762f"
+"@types/chai@^4.0.6":
+  version "4.0.10"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.10.tgz#0eb222c7353adde8e0980bea04165d4d3b6afef3"
 
 "@types/js-beautify@^0.0.31":
   version "0.0.31"
@@ -15,8 +15,8 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.44.tgz#1d4a798e53f35212fd5ad4d04050620171cd5b5e"
 
 "@types/node@^8.0.53":
-  version "8.0.53"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.53.tgz#396b35af826fa66aad472c8cb7b8d5e277f4e6d8"
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.1.tgz#4ec3020bcdfe2abffeef9ba3fbf26fca097514b5"
 
 abbrev@1:
   version "1.1.1"
@@ -44,12 +44,6 @@ brace-expansion@^1.1.7:
 browser-stdout@1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/browser-stdout/-/browser-stdout-1.3.0.tgz#f351d32969d32fa5d7a5567154263d928ae3bd1f"
-
-cha@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/cha/-/cha-0.2.1.tgz#538f682da91c5e74f62839ce97c2a9279172e4be"
-  dependencies:
-    lodash "~2.4.1"
 
 chai@^4.1.2:
   version "4.1.2"
@@ -170,10 +164,6 @@ js-beautify@^1.7.5:
     mkdirp "~0.5.0"
     nopt "~3.0.1"
 
-lodash@~2.4.1:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
-
 lru-cache@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-3.2.0.tgz#71789b3b7f5399bec8565dda38aa30d2a097efee"
@@ -266,11 +256,9 @@ typescript@^2.6.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 vamtiger-argv@^1.2.1:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/vamtiger-argv/-/vamtiger-argv-1.2.2.tgz#ba8c04a8bfd6612f3b20e6de75655cd0eb62f48e"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/vamtiger-argv/-/vamtiger-argv-1.2.3.tgz#2255ca6fdc0b035264e7ae55b9759c00946138c6"
   dependencies:
-    "@types/chai" "^4.0.4"
-    cha "^0.2.1"
     vamtiger-regex-leading-dash "^1.0.10"
     xregexp "^3.2.0"
 
@@ -289,6 +277,10 @@ vamtiger-bash@^0.0.15:
 vamtiger-bash@^0.0.16:
   version "0.0.16"
   resolved "https://registry.yarnpkg.com/vamtiger-bash/-/vamtiger-bash-0.0.16.tgz#e89ab67e4a91680c556be974661a6ece2cebf2d5"
+
+vamtiger-copy-file@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/vamtiger-copy-file/-/vamtiger-copy-file-0.0.9.tgz#2565d5162225aeb26460a48f5f073bc7aea9513b"
 
 vamtiger-create-directory@0.0.3:
   version "0.0.3"

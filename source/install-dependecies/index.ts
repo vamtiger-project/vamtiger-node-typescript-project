@@ -9,6 +9,8 @@ export default async (params: Params) => {
         '@types/node',
         'mocha',
         '@types/mocha',
+        'chai',
+        '@types/chai',
         'typescript',
         'vamtiger-node-typescript-commit'
     ].join(' ');
