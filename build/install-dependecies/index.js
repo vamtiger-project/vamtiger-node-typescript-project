@@ -18,6 +18,8 @@ exports.default = (params) => __awaiter(this, void 0, void 0, function* () {
         '@types/node',
         'mocha',
         '@types/mocha',
+        'chai',
+        '@types/chai',
         'typescript',
         'vamtiger-node-typescript-commit'
     ].join(' ');
