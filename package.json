@@ -1,9 +1,10 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.0.15",
+  "version": "0.0.16-0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
+  "repository": "https://github.com/vamtiger-project/vamtiger-node-typescript-project.git",
   "bin": {
     "vamtigerNodeTypescriptProject": "build/bin/index.js"
   },
