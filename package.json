@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "mocha build/test --recursive --timeout 300000",
-    "build": "tsc",
-    "commit": "vamtigerNodeTypescriptCommit --push --publish"
+    "build": "rm -rf build/*; tsc",
+    "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig"
   },
   "keywords": [
     "node.js",
