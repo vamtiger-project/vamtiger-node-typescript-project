@@ -296,9 +296,9 @@ vamtiger-get-directory-content@^0.0.31:
   version "0.0.31"
   resolved "https://registry.yarnpkg.com/vamtiger-get-directory-content/-/vamtiger-get-directory-content-0.0.31.tgz#18284bb66882cee521df5deaf5bd07fbda6d7c87"
 
-vamtiger-node-typescript-commit@^0.0.50:
-  version "0.0.50"
-  resolved "https://registry.yarnpkg.com/vamtiger-node-typescript-commit/-/vamtiger-node-typescript-commit-0.0.50.tgz#51ee2636fb0a4a6cbf279cee6d24c36a37b30e5f"
+vamtiger-node-typescript-commit@^0.0.51:
+  version "0.0.51"
+  resolved "https://registry.yarnpkg.com/vamtiger-node-typescript-commit/-/vamtiger-node-typescript-commit-0.0.51.tgz#9abc8c584b9bc9c4f25f3994714a1ef2b8ce8e45"
   dependencies:
     bluebird "^3.5.1"
     vamtiger-argv "^1.2.1"
