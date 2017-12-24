@@ -18,7 +18,7 @@ yarn global vamtiger-node-typescript-project
 ```
 
 ## Usage
-[VAMTIGER Node Typescript Project](https://github.com/vamtiger-project/vamtiger-node-typescript-project) can initializes a [node.js](https://nodejs.org/en/) [typescript](https://www.typescriptlang.org/) in the current working directory:
+[VAMTIGER Node Typescript Project](https://github.com/vamtiger-project/vamtiger-node-typescript-project) initializes a [node.js](https://nodejs.org/en/) [typescript](https://www.typescriptlang.org/) in the current working directory:
 ```json
 vamtigerNodeTypescriptProject
 ```
