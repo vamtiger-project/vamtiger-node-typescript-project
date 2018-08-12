@@ -10,7 +10,7 @@
 ## Installation
 [VAMTIGER Node Typescript Project](https://github.com/vamtiger-project/vamtiger-node-typescript-project) can be installed using [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/lang/en/):
 ```javascript
-npm i --global vamtiger-node-typescript-project 
+npm i --global vamtiger-node-typescript-project
 ```
 or
 ```javascript
@@ -21,4 +21,6 @@ yarn global vamtiger-node-typescript-project
 [VAMTIGER Node Typescript Project](https://github.com/vamtiger-project/vamtiger-node-typescript-project) initializes a [node.js](https://nodejs.org/en/) [typescript](https://www.typescriptlang.org/) in the current working directory:
 ```json
 vamtigerNodeTypescriptProject
+# or
+vamtiger-node-typescript-project
 ```
