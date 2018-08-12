@@ -6,7 +6,8 @@
   "types": "build/index.d.ts",
   "repository": "https://github.com/vamtiger-project/vamtiger-node-typescript-project.git",
   "bin": {
-    "vamtigerNodeTypescriptProject": "build/bin/index.js"
+    "vamtigerNodeTypescriptProject": "build/bin/index.js",
+    "vamtiger-node-typescript-project": "build/bin/index.js"
   },
   "scripts": {
     "test": "mocha build/test --recursive --timeout 300000",
@@ -28,7 +29,7 @@
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
     "typescript": "^2.6.2",
-    "vamtiger-node-typescript-commit": "0.0.51"
+    "vamtiger-node-typescript-commit": "latest"
   },
   "dependencies": {
     "js-beautify": "^1.7.5",
