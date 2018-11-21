@@ -9,6 +9,6 @@ exports.default = () => new Promise((resolve, reject) => {
         prompt.stdin.write(data);
         process.stdin.resume();
     });
-    process.stdin.on('close', resolve);
+    prompt.on('close', resolve);
 });
 //# sourceMappingURL=index.js.map
