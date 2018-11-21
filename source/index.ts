@@ -45,7 +45,7 @@ export default async () => {
     await initializePackage();
 
     await updatePackage({ projectPackage });
-    
+
     await Promise.all([
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),

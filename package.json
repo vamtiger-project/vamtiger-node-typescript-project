@@ -10,7 +10,7 @@
     "vamtiger-node-typescript-project": "build/bin/index.js"
   },
   "scripts": {
-    "test": "mocha build/test --recursive --timeout 300000",
+    "test": "npm run build && mocha build/test --recursive --timeout 300000",
     "build": "rm -rf build/*; tsc",
     "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig"
   },

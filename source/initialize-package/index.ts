@@ -11,5 +11,5 @@ export default () => new Promise((resolve, reject) => {
         process.stdin.resume();
     });
 
-    process.stdin.on('close', resolve);
+    prompt.on('close', resolve);
 });
