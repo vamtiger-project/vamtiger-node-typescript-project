@@ -1,5 +1,8 @@
 import { js_beautify as format } from 'js-beautify';
 import createFile from 'vamtiger-create-file';
+import Args from 'vamtiger-argv/build/main';
+
+const args = new Args();
 
 export default async (params: Params) => {
     const projectPackage = params.projectPackage;
@@ -10,9 +13,19 @@ export default async (params: Params) => {
     currentPackage.main = 'build';
     currentPackage.types = 'build/index.d.ts';
 
-    currentPackage.scripts.test = 'mocha build/test --recursive';
+    currentPackage.scripts.test = 'npm run build && npm run mocha';
+    currentPackage.scripts.mocha = 'mocha build/test --recursive';
     currentPackage.scripts.build = 'tsc';
     currentPackage.scripts.commit = 'vamtigerNodeTypescriptCommit --push --publish';
+
+    if (args.has('bundle')) {
+        currentPackage.scripts.commit = 'npm run bundle && vamtiger-node-typescript-commit --push --publish --buildScript bundle';
+        currentPackage.scripts.clean = 'rm -rf build/*';
+        currentPackage.scripts['clean-bundle'] = 'vamtiger-remove -d build -p \\"(index|bin)\\\\.(js(\\\\.map)?|d\\\\.ts)\\"';
+        currentPackage.scripts['bundle-source'] = 'vamtiger-bundle-typescript --relativePath --entryFilePath source/index.ts --bundleFilePath build/index.js --format cjs --sourcemap true --copySourceMap --minify';
+        currentPackage.scripts.bundle = 'npm test && npm run clean && npm run build && npm run bundle-source && npm run clean-bundle';
+        currentPackage.scripts.watch = 'npm run bundle -- --watch';
+    }
 
     updatedPackage = format(JSON.stringify(currentPackage));
 
@@ -33,4 +46,14 @@ interface Scripts {
     build: string;
     commit: string;
     test: string;
+    mocha: string;
+    bundle?: string;
+    clean?: string;
+    'build-types'?: string;
+    'clean-bundle'?: string;
+    'bundle-source'?: string;
+    'bundle-bin'?: string;
+    'test-bundle'?: string;
+    watch?: string;
+    'test-watch'?: string;
 }

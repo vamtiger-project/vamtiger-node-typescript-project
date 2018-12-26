@@ -7,10 +7,12 @@
   "repository": "https://github.com/vamtiger-project/vamtiger-node-typescript-project.git",
   "bin": {
     "vamtigerNodeTypescriptProject": "build/bin/index.js",
-    "vamtiger-node-typescript-project": "build/bin/index.js"
+    "vamtiger-node-typescript-project": "build/bin/index.js",
+    "vamtiger-typescript-project": "build/bin/index.js --bundle"
   },
   "scripts": {
-    "test": "npm run build && mocha build/test --recursive --timeout 300000",
+    "test": "npm run build && npm run mocha-test",
+    "mocha-test": "mocha build/test --recursive --timeout 300000",
     "build": "rm -rf build/*; tsc",
     "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig"
   },
@@ -33,9 +35,10 @@
   },
   "dependencies": {
     "js-beautify": "^1.7.5",
+    "vamtiger-argv": "^1.2.6",
     "vamtiger-bash": "^0.0.16",
     "vamtiger-copy-file": "^0.0.9",
-    "vamtiger-create-directory": "0.0.3",
+    "vamtiger-create-directory": "latest",
     "vamtiger-create-file": "^0.0.7",
     "vamtiger-get-directory-content": "^0.0.31"
   }
