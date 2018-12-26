@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.0.26",
+  "version": "0.0.27-0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
@@ -8,7 +8,7 @@
   "bin": {
     "vamtigerNodeTypescriptProject": "build/bin/index.js",
     "vamtiger-node-typescript-project": "build/bin/index.js",
-    "vamtiger-typescript-project": "build/bin/index.js --bundle"
+    "vamtiger-typescript-project": "build/bin/index.js"
   },
   "scripts": {
     "test": "npm run build && npm run mocha-test",
