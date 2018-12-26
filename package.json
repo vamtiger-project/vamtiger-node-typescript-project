@@ -8,7 +8,7 @@
   "bin": {
     "vamtigerNodeTypescriptProject": "build/bin/index.js",
     "vamtiger-node-typescript-project": "build/bin/index.js",
-    "vamtiger-typescript-project": "build/bin/index.js --bundle"
+    "vamtiger-typescript-project": "build/bin/index.js"
   },
   "scripts": {
     "test": "npm run build && npm run mocha-test",
