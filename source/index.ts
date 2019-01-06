@@ -50,7 +50,7 @@ export default async () => {
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),
         createFile(main, ''),
-        installDependecies({ workingDirectory }),
+        // installDependecies({ workingDirectory }),
         copyFile(tsconfig)
     ]);
 
