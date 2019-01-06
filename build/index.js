@@ -7,7 +7,6 @@ const vamtiger_copy_file_1 = require("vamtiger-copy-file");
 const initialize_repository_1 = require("./initialize-repository");
 const initialize_package_1 = require("./initialize-package");
 const update_package_1 = require("./update-package");
-const install_dependecies_1 = require("./install-dependecies");
 exports.default = async () => {
     const workingDirectory = process.cwd();
     const sourceBranch = 'source';
@@ -28,7 +27,7 @@ exports.default = async () => {
         initialize_repository_1.default({ workingDirectory }),
         vamtiger_create_directory_1.default(testFolder),
         vamtiger_create_file_1.default(main, ''),
-        install_dependecies_1.default({ workingDirectory }),
+        // installDependecies({ workingDirectory }),
         vamtiger_copy_file_1.default(tsconfig)
     ]);
     return true;
