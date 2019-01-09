@@ -1,9 +1,10 @@
 #!/usr/bin/env node
-
+import Args from 'vamtiger-argv/build/main';
 import getDirectoryContent from 'vamtiger-get-directory-content';
 import createProject from '..';
 
 const workingDirectory = process.cwd();
+const args = new Args();
 
 main().catch(handleError);
 
@@ -16,6 +17,9 @@ async function main() {
     }
     
     await createProject();
+    
+    if (!args.has('keepAlive'))
+        process.exit();
 }
 
 function handleError(error: Error) {
