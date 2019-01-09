@@ -22,7 +22,9 @@ exports.default = async (params) => {
         cwd: workingDirectory
     };
     const dependencies = (args.has('bundle') && devDependencies.concat(bundleDevDependencies) || devDependencies).join(' ');
-    await vamtiger_bash_1.default(`npm install --save-dev ${dependencies}`, bashOptions)
+    const installDependencies = `npm install --save-dev ${dependencies}`;
+    return vamtiger_bash_1.default(installDependencies, bashOptions)
+        .then(console.log)
         .catch(error => console.warn(error));
 };
 //# sourceMappingURL=index.js.map
