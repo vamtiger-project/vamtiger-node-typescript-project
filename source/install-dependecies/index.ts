@@ -22,8 +22,10 @@ export default async (params: Params) => {
         cwd: workingDirectory
     };
     const dependencies = (args.has('bundle') && devDependencies.concat(bundleDevDependencies) || devDependencies).join(' ');
+    const installDependencies = `npm install --save-dev ${dependencies}`;
     
-    await bash(`npm install --save-dev ${dependencies}`, bashOptions)
+    return bash(installDependencies, bashOptions)
+        .then(console.log)
         .catch(error => console.warn(error));
 }
 
