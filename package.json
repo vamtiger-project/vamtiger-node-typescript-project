@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "js-beautify": "^1.7.5",
+    "vamtiger-argv": "^1.2.6",
     "vamtiger-bash": "^0.0.16",
     "vamtiger-copy-file": "^0.0.9",
     "vamtiger-create-directory": "0.0.3",
