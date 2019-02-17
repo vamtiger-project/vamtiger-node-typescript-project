@@ -28,7 +28,7 @@ exports.default = async (params) => {
         currentPackage.scripts.watch = 'npm run bundle -- --watch';
     }
     else if (webComponent) {
-        Object.assign(currentPackage, get_web_component_scripts_1.default({ name }));
+        Object.assign(currentPackage.scripts, get_web_component_scripts_1.default({ name }));
     }
     updatedPackage = js_beautify_1.js_beautify(JSON.stringify(currentPackage));
     await vamtiger_create_file_1.default(projectPackage, updatedPackage);

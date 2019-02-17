@@ -1,5 +1,5 @@
 import { IGetWebComponentScripts } from './types';
-export default function ({name}: IGetWebComponentScripts): {
+export default function ({ name }: IGetWebComponentScripts): {
     test: string;
     mocha: string;
     build: string;
