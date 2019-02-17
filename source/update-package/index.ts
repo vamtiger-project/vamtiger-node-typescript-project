@@ -35,7 +35,7 @@ export default async (params: Params) => {
         currentPackage.scripts.watch = 'npm run bundle -- --watch';
     } else if (webComponent) {
         Object.assign(
-            currentPackage,
+            currentPackage.scripts,
             getWebComponentScripts({ name })
         );
     }
