@@ -8,7 +8,7 @@ export default function ({ name }: IGetWebComponentScripts) {
         commit: 'npm run bundle && vamtiger-node-typescript-commit --push --publish --buildScript bundle',
         clean: 'rm -rf build/*',
         'clean-install': 'rm -rf package-lock.json node_modules && npm i',
-        'clean-bundle': `vamtiger-remove -d build -p \'(${name})\.(js(\.map)?|d\.ts)\'`,
+        'clean-bundle': `vamtiger-remove -d build -p \\'(${name})\\.(js(\\.map)?|d\\.ts)\\'`,
         'bundle-source': 'vamtiger-bundle-typescript --relativePath --entryFilePath source/vamtiger-oblique-banner.ts --bundleFilePath build/vamtiger-oblique-banner.js --format iife --sourcemap true --copySourceMap --minify',
         'bundle-node-test': 'vamtiger-bundle-typescript --relativePath --entryFilePath source/test/node.ts --bundleFilePath build/test/node.js --format cjs --sourcemap true --copySourceMap --minify',
         'bundle-browser-test': 'vamtiger-bundle-typescript --relativePath --entryFilePath source/test/browser.ts --bundleFilePath build/test/browser.js --format iife --sourcemap true --copySourceMap --minify',
