@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const main_1 = require("vamtiger-argv/build/main");
 const vamtiger_get_directory_content_1 = require("vamtiger-get-directory-content");
 const __1 = require("..");
 const workingDirectory = process.cwd();
+const args = new main_1.default();
 main().catch(handleError);
 async function main() {
     const directoryContent = await vamtiger_get_directory_content_1.default(workingDirectory);
@@ -12,6 +14,8 @@ async function main() {
         throw new Error("This project has already been created" /* alreadyCreated */);
     }
     await __1.default();
+    if (!args.has('keepAlive'))
+        process.exit();
 }
 function handleError(error) {
     console.error(error);

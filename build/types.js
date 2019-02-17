@@ -4,13 +4,15 @@ var CommandlineArgument;
 (function (CommandlineArgument) {
     CommandlineArgument["webComponent"] = "webComponent";
 })(CommandlineArgument = exports.CommandlineArgument || (exports.CommandlineArgument = {}));
+var ShortCommandlineArgument;
+(function (ShortCommandlineArgument) {
+    ShortCommandlineArgument["webComponent"] = "w";
+})(ShortCommandlineArgument = exports.ShortCommandlineArgument || (exports.ShortCommandlineArgument = {}));
+;
 var CommandlineArgumentDescription;
 (function (CommandlineArgumentDescription) {
     CommandlineArgumentDescription["webComponent"] = "Create Web Component Project";
 })(CommandlineArgumentDescription = exports.CommandlineArgumentDescription || (exports.CommandlineArgumentDescription = {}));
-exports.shortCommandlineArgument = {
-    w: CommandlineArgument.webComponent
-};
 exports.commandlineArgumentDescription = {
     webComponent: CommandlineArgumentDescription.webComponent,
     w: CommandlineArgumentDescription.webComponent

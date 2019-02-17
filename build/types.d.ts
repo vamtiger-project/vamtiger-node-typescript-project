@@ -1,6 +1,9 @@
 export declare enum CommandlineArgument {
     webComponent = "webComponent",
 }
+export declare enum ShortCommandlineArgument {
+    webComponent = "w",
+}
 export declare enum CommandlineArgumentDescription {
     webComponent = "Create Web Component Project",
 }
@@ -13,9 +16,6 @@ export interface IGetWebComponentTestHtml {
 export interface ICreateWebComponentHtml {
     packagePath: string;
 }
-export declare const shortCommandlineArgument: {
-    w: CommandlineArgument;
-};
 export declare const commandlineArgumentDescription: {
     webComponent: CommandlineArgumentDescription;
     w: CommandlineArgumentDescription;

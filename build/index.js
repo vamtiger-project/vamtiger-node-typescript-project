@@ -13,7 +13,7 @@ const install_dependecies_1 = require("./install-dependecies");
 const create_web_component_html_1 = require("./create-web-component-html");
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent)
-    || args.has(types_1.shortCommandlineArgument.w);
+    || args.has(types_1.ShortCommandlineArgument.webComponent);
 exports.default = async () => {
     const workingDirectory = process.cwd();
     const sourceBranch = 'source';

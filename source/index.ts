@@ -5,7 +5,7 @@ import copyFile from 'vamtiger-copy-file';
 import Args from 'vamtiger-argv/build/main';
 import {
     CommandlineArgument,
-    shortCommandlineArgument
+    ShortCommandlineArgument
 } from './types';
 import initializeRepository from './initialize-repository';
 import initializePackage from './initialize-package';
@@ -15,7 +15,7 @@ import createWebcomponentHtml from './create-web-component-html';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
-    || args.has(shortCommandlineArgument.w);
+    || args.has(ShortCommandlineArgument.webComponent);
 
 export default async () => {
     const workingDirectory = process.cwd();

@@ -5,6 +5,7 @@ export default () => new Promise((resolve, reject) => {
 
     prompt.stdout.pipe(process.stdout);
     prompt.stdin.pipe(process.stdin);
+    prompt.stderr.pipe(process.stderr);
 
     process.stdin.on('data', data => {
         prompt.stdin.write(data);
