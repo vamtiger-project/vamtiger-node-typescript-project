@@ -4,10 +4,16 @@ const path_1 = require("path");
 const vamtiger_create_directory_1 = require("vamtiger-create-directory");
 const vamtiger_create_file_1 = require("vamtiger-create-file");
 const vamtiger_copy_file_1 = require("vamtiger-copy-file");
+const main_1 = require("vamtiger-argv/build/main");
+const types_1 = require("./types");
 const initialize_repository_1 = require("./initialize-repository");
 const initialize_package_1 = require("./initialize-package");
 const update_package_1 = require("./update-package");
 const install_dependecies_1 = require("./install-dependecies");
+const create_web_component_html_1 = require("./create-web-component-html");
+const args = new main_1.default();
+const webComponent = args.has(types_1.CommandlineArgument.webComponent)
+    || args.has(types_1.ShortCommandlineArgument.webComponent);
 exports.default = async () => {
     const workingDirectory = process.cwd();
     const sourceBranch = 'source';
@@ -31,6 +37,9 @@ exports.default = async () => {
         install_dependecies_1.default({ workingDirectory }),
         vamtiger_copy_file_1.default(tsconfig)
     ]);
+    webComponent && await create_web_component_html_1.default({
+        packagePath: projectPackage
+    });
     return true;
 };
 //# sourceMappingURL=index.js.map

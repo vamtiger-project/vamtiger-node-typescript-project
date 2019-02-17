@@ -1,0 +1,25 @@
+import { IGetWebComponentScripts } from './types';
+export default function ({name}: IGetWebComponentScripts): {
+    test: string;
+    mocha: string;
+    build: string;
+    commit: string;
+    clean: string;
+    'clean-install': string;
+    'clean-bundle': string;
+    'bundle-source': string;
+    'bundle-node-test': string;
+    'bundle-browser-test': string;
+    'bundle': string;
+    'bundle-html': string;
+    'bundle-css': string;
+    'bundle-shadow-css': string;
+    'bundle-document-css': string;
+    'watch-source': string;
+    'watch-node-test': string;
+    'watch-browser-test': string;
+    'watch-html': string;
+    'watch-css': string;
+    'watch': string;
+    'serve': string;
+};
