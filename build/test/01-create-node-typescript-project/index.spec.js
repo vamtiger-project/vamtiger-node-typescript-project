@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = require("path");
 const chai_1 = require("chai");
 const vamtiger_create_directory_1 = require("vamtiger-create-directory");
-const vamtiger_bash_1 = require("vamtiger-bash");
 const vamtiger_get_directory_content_1 = require("vamtiger-get-directory-content");
 const __1 = require("../..");
 const workingDirectory = path_1.resolve(__dirname, 'node-typescript-project');
@@ -26,7 +25,7 @@ describe('vamtiger-node-typescript-project should', function () {
         const projectContentCreated = expectedContent.every(expected => projectContent.includes(expected));
         chai_1.expect(initialization).to.be.ok;
         chai_1.expect(projectContentCreated).to.be.ok;
-        await vamtiger_bash_1.default(`rm -rfv ${workingDirectory}`);
+        // await bash(`rm -rfv ${workingDirectory}`);
     });
 });
 //# sourceMappingURL=index.spec.js.map
