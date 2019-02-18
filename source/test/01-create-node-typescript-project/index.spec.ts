@@ -35,6 +35,6 @@ describe('vamtiger-node-typescript-project should', function () {
         expect(initialization).to.be.ok;
         expect(projectContentCreated).to.be.ok;
 
-        await bash(`rm -rfv ${workingDirectory}`);
+        // await bash(`rm -rfv ${workingDirectory}`);
     })
 })
