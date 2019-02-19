@@ -8,7 +8,8 @@ const folder = resolvePath(
     'source'
 );
 
-export default async function({ name = 'index.ts' }: IParams) {
+export default async function({ packagePath }: IParams) {
+    const { name } = require(packagePath);
     const filePath = resolvePath(
         folder,
         name
@@ -19,5 +20,5 @@ export default async function({ name = 'index.ts' }: IParams) {
 }
 
 export interface IParams {
-    name: string;
+    packagePath: string;
 }
