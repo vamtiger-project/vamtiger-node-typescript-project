@@ -17,7 +17,6 @@ import createWebComponentCss from './create-web-component-css';
 import createWebComponentElement from './create-web-component-element';
 import createWebComponentRoot from './create-web-component-root';
 
-const { all: parallel } = Promise;
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
     || args.has(ShortCommandlineArgument.webComponent);
@@ -61,7 +60,7 @@ export default async () => {
 
     await updatePackage({ projectPackage });
 
-    await parallel([
+    await Promise.all([
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),
         createFile(main, ''),
@@ -70,7 +69,7 @@ export default async () => {
     ]);
 
     if (webComponent) {
-        await parallel([
+        await Promise.all([
             createWebcomponentTestHtml({ packagePath: projectPackage }),
             createWebComponentHtml(),
             createWebComponentCss(),
