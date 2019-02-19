@@ -5,15 +5,19 @@ import createFile from 'vamtiger-create-file';
 const { cwd } = process;
 const folder = resolvePath(
     cwd(),
-    'source',
-    'html'
-);
-const htmlPath = resolvePath(
-    folder,
-    'inxex.html'
+    'source'
 );
 
-export default async function() {
+export default async function({ name = 'index.ts' }: IParams) {
+    const filePath = resolvePath(
+        folder,
+        name
+    );
+
     await createFolder(folder);
-    await createFile(htmlPath, '');
+    await createFile(filePath, '');
+}
+
+export interface IParams {
+    name: string;
 }

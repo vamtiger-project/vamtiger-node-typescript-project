@@ -11,8 +11,13 @@ import initializeRepository from './initialize-repository';
 import initializePackage from './initialize-package';
 import updatePackage from './update-package';
 import installDependecies from './install-dependecies';
-import createWebcomponentHtml from './create-web-component-html';
+import createWebcomponentTestHtml from './create-web-component-test-html';
+import createWebComponentHtml from './create-web-component-html';
+import createWebComponentCss from './create-web-component-css';
+import createWebComponentElement from './create-web-component-element';
+import createWebComponentRoot from './create-web-component-root';
 
+const { all: parallel } = Promise;
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
     || args.has(ShortCommandlineArgument.webComponent);
@@ -49,6 +54,7 @@ export default async () => {
         source: tsconfigSource,
         destination: tsconfigDestination
     };
+    const { name } = require(projectPackage);
 
     await createDirectory(sourceFolder);
 
@@ -56,7 +62,7 @@ export default async () => {
 
     await updatePackage({ projectPackage });
 
-    await Promise.all([
+    await parallel([
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),
         createFile(main, ''),
@@ -64,9 +70,15 @@ export default async () => {
         copyFile(tsconfig)
     ]);
 
-    webComponent && await createWebcomponentHtml({
-        packagePath: projectPackage
-    });
+    if (webComponent) {
+        await parallel([
+            createWebcomponentTestHtml({ packagePath: projectPackage }),
+            createWebComponentHtml(),
+            createWebComponentCss(),
+            createWebComponentElement(),
+            createWebComponentRoot({ name })
+        ]);
+    }
 
     return true;
 }

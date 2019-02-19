@@ -3,17 +3,26 @@ import createFolder from 'vamtiger-create-directory';
 import createFile from 'vamtiger-create-file';
 
 const { cwd } = process;
+const { all: parallel } = Promise;
 const folder = resolvePath(
     cwd(),
     'source',
-    'html'
+    'css'
 );
-const htmlPath = resolvePath(
+const cssPath = resolvePath(
     folder,
-    'inxex.html'
+    'index.css'
+);
+const documentCssPath = resolvePath(
+    folder,
+    'document-index.css'
 );
 
 export default async function() {
     await createFolder(folder);
-    await createFile(htmlPath, '');
+
+    await parallel([
+        createFile(cssPath, ''),
+        createFile(documentCssPath, '')
+    ]);
 }
