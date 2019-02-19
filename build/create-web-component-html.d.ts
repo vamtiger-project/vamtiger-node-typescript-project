@@ -1,2 +1,1 @@
-import { ICreateWebComponentHtml } from './types';
-export default function ({ packagePath }: ICreateWebComponentHtml): Promise<void>;
+export default function (): Promise<void>;
