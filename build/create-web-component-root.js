@@ -4,11 +4,11 @@ const path_1 = require("path");
 const vamtiger_create_directory_1 = require("vamtiger-create-directory");
 const vamtiger_create_file_1 = require("vamtiger-create-file");
 const { cwd } = process;
-const folder = path_1.resolve(cwd(), 'source', 'html');
-const htmlPath = path_1.resolve(folder, 'inxex.html');
-async function default_1() {
+const folder = path_1.resolve(cwd(), 'source');
+async function default_1({ name = 'index.ts' }) {
+    const filePath = path_1.resolve(folder, name);
     await vamtiger_create_directory_1.default(folder);
-    await vamtiger_create_file_1.default(htmlPath, '');
+    await vamtiger_create_file_1.default(filePath, '');
 }
 exports.default = default_1;
-//# sourceMappingURL=create-web-component-html.js.map
+//# sourceMappingURL=create-web-component-root.js.map
