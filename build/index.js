@@ -32,7 +32,6 @@ exports.default = async () => {
         source: tsconfigSource,
         destination: tsconfigDestination
     };
-    const { name } = require(projectPackage);
     await vamtiger_create_directory_1.default(sourceFolder);
     await initialize_package_1.default();
     await update_package_1.default({ projectPackage });
@@ -49,7 +48,7 @@ exports.default = async () => {
             create_web_component_html_1.default(),
             create_web_component_css_1.default(),
             create_web_component_element_1.default(),
-            create_web_component_root_1.default({ name })
+            create_web_component_root_1.default({ packagePath: projectPackage })
         ]);
     }
     return true;
