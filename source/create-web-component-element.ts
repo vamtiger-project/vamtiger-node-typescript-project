@@ -15,6 +15,5 @@ const filePath = resolvePath(
 );
 
 export default async function () {
-    await createFolder(folder);
     await createFile(filePath, '');
 }

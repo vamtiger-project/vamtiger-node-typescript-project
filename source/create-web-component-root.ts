@@ -15,7 +15,6 @@ export default async function({ packagePath }: IParams) {
         name
     );
 
-    await createFolder(folder);
     await createFile(filePath, '');
 }
 
