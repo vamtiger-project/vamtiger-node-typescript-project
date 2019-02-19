@@ -5,7 +5,8 @@ const vamtiger_create_directory_1 = require("vamtiger-create-directory");
 const vamtiger_create_file_1 = require("vamtiger-create-file");
 const { cwd } = process;
 const folder = path_1.resolve(cwd(), 'source');
-async function default_1({ name = 'index.ts' }) {
+async function default_1({ packagePath }) {
+    const { name } = require(packagePath);
     const filePath = path_1.resolve(folder, name);
     await vamtiger_create_directory_1.default(folder);
     await vamtiger_create_file_1.default(filePath, '');
