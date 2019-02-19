@@ -3,7 +3,6 @@ import createFolder from 'vamtiger-create-directory';
 import createFile from 'vamtiger-create-file';
 
 const { cwd } = process;
-const { all: parallel } = Promise;
 const folder = resolvePath(
     cwd(),
     'source',
@@ -21,7 +20,7 @@ const documentCssPath = resolvePath(
 export default async function() {
     await createFolder(folder);
 
-    await parallel([
+    await Promise.all([
         createFile(cssPath, ''),
         createFile(documentCssPath, '')
     ]);
