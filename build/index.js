@@ -15,7 +15,6 @@ const create_web_component_html_1 = require("./create-web-component-html");
 const create_web_component_css_1 = require("./create-web-component-css");
 const create_web_component_element_1 = require("./create-web-component-element");
 const create_web_component_root_1 = require("./create-web-component-root");
-const { all: parallel } = Promise;
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent)
     || args.has(types_1.ShortCommandlineArgument.webComponent);
@@ -35,7 +34,7 @@ exports.default = async () => {
     await vamtiger_create_directory_1.default(sourceFolder);
     await initialize_package_1.default();
     await update_package_1.default({ projectPackage });
-    await parallel([
+    await Promise.all([
         initialize_repository_1.default({ workingDirectory }),
         vamtiger_create_directory_1.default(testFolder),
         vamtiger_create_file_1.default(main, ''),
@@ -43,7 +42,7 @@ exports.default = async () => {
         vamtiger_copy_file_1.default(tsconfig)
     ]);
     if (webComponent) {
-        await parallel([
+        await Promise.all([
             create_web_component_test_html_1.default({ packagePath: projectPackage }),
             create_web_component_html_1.default(),
             create_web_component_css_1.default(),
