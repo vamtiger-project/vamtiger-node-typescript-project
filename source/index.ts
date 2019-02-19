@@ -54,7 +54,6 @@ export default async () => {
         source: tsconfigSource,
         destination: tsconfigDestination
     };
-    const { name } = require(projectPackage);
 
     await createDirectory(sourceFolder);
 
@@ -76,7 +75,7 @@ export default async () => {
             createWebComponentHtml(),
             createWebComponentCss(),
             createWebComponentElement(),
-            createWebComponentRoot({ name })
+            createWebComponentRoot({ packagePath: projectPackage })
         ]);
     }
 
