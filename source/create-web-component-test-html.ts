@@ -29,7 +29,7 @@ const loadScriptTest = resolvePath(
 );
 const nodeScriptTest = resolvePath(
     testFolder,
-    'load-script.ts'
+    'node.ts'
 );
 
 export default async function ({ packagePath }: ICreateWebComponentHtml) {

@@ -21,7 +21,7 @@ export default class ${startCase(name).replace(' ', '')} extends HTMLElement {
 
         const shadowRoot = this.attachShadow(shadowRootConfig);
         const stylesheet = getTemplate({
-            selector: Selector.stylesheet
+            selector: Selector.style
         });
         const elements = [
             stylesheet
