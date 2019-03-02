@@ -15,7 +15,7 @@ import {
 
 export const name = '${kebabCase(name)}';
 
-export default class ${startCase(name)} extends HTMLElement {
+export default class ${startCase(name).replace(' ', '')} extends HTMLElement {
     constructor() {
         super();
 

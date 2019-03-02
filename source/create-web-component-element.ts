@@ -20,11 +20,11 @@ const configPath = resolvePath(
 );
 const getTemplatePath = resolvePath(
     folder,
-    'config.ts'
+    'get-template.ts'
 );
 const typesPath = resolvePath(
     folder,
-    'config.ts'
+    'types.ts'
 );
 
 export default async function ({ packagePath }: IParams) {
