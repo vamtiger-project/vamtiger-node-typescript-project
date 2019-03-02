@@ -50,6 +50,7 @@ exports.default = async (params) => {
         currentPackage.scripts['watch-css'] = 'npm run bundle-css -- --watch';
         currentPackage.scripts.watch = 'vamtiger-watch --folder source --extension ts --script test --extension html --script bundle-html --extension css --script bundle-css';
         currentPackage.scripts.serve = 'npm run test && cd build && python -m SimpleHTTPServer';
+        currentPackage.scripts['install-source'] = 'npm i --save-dev vamtiger-browser-method@source';
     }
     updatedPackage = js_beautify_1.js_beautify(JSON.stringify(currentPackage));
     await vamtiger_create_file_1.default(projectPackage, updatedPackage);
