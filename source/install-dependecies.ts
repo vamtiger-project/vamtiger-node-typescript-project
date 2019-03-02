@@ -34,7 +34,8 @@ export default async (params: Params) => {
         cwd: workingDirectory
     };
     const dependencies = devDependencies;
-    const installDependencies = `npm install --save-dev ${dependencies}`;
+
+    let installDependencies: string;
 
     if (bundle || webComponent) {
         dependencies.push(...bundleDevDependencies);
@@ -43,6 +44,10 @@ export default async (params: Params) => {
     if (webComponent) {
         dependencies.push(...webComponentsDevDependecies);
     }
+
+    installDependencies = `npm install --save-dev ${dependencies.join(' ')}`;
+
+    console.log(installDependencies);
 
     return bash(installDependencies, bashOptions)
         .then(console.log)
