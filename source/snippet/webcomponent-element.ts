@@ -6,6 +6,7 @@ export interface IParams {
 
 export default ({name}: IParams) => `import {
     Selector
+    ObservedAttribute,
 } from './types';
 import getTemplate from './get-template';
 import {
@@ -38,7 +39,7 @@ export default class ${startCase(name).replace(' ', '')} extends HTMLElement {
 
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(name: ObservedAttribute, oldValue: string, newValue: string) {
 
     }
 }`

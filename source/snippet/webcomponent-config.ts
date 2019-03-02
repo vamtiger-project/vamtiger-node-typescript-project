@@ -1,7 +1,7 @@
-export default `import { ObservedAttributes } from './types'
+export default `import { ObservedAttribute } from './types'
 
 export const shadowRoot = {
     mode: 'open'
 } as ShadowRootInit;
 
-export const observedAttributes = Object.keys(ObservedAttributes) as (keyof typeof ObservedAttributes)[];`
+export const observedAttributes = Object.keys(ObservedAttributes) as ObservedAttribute[];`
