@@ -1,4 +1,7 @@
-export default `import { ObservedAttribute } from './types'
+export default `import {
+    ObservedAttributes,
+    ObservedAttribute
+} from './types'
 
 export const shadowRoot = {
     mode: 'open'

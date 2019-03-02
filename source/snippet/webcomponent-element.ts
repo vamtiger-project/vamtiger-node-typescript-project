@@ -5,8 +5,8 @@ export interface IParams {
 }
 
 export default ({name}: IParams) => `import {
-    Selector
-    ObservedAttribute,
+    Selector,
+    ObservedAttribute
 } from './types';
 import getTemplate from './get-template';
 import {
