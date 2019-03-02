@@ -13,7 +13,7 @@ const testFolder = path_1.dirname(folder);
 const htmlPath = path_1.resolve(folder, 'test.html');
 const browserTest = path_1.resolve(testFolder, 'browser.ts');
 const loadScriptTest = path_1.resolve(testFolder, 'load-script.ts');
-const nodeScriptTest = path_1.resolve(testFolder, 'load-script.ts');
+const nodeScriptTest = path_1.resolve(testFolder, 'node.ts');
 async function default_1({ packagePath }) {
     const { name } = require(packagePath);
     const html = get_web_component_test_html_1.default({ name });

@@ -18,7 +18,7 @@ export default class ${lodash_1.startCase(name).replace(' ', '')} extends HTMLEl
 
         const shadowRoot = this.attachShadow(shadowRootConfig);
         const stylesheet = getTemplate({
-            selector: Selector.stylesheet
+            selector: Selector.style
         });
         const elements = [
             stylesheet

@@ -6,5 +6,5 @@ export const shadowRoot = {
     mode: 'open'
 } as ShadowRootInit;
 
-export const observedAttributes = Object.keys(ObservedAttributes) as ObservedAttributes[];`;
+export const observedAttributes = Object.keys(ObservedAttributes) as (keyof typeof ObservedAttributes)[];`;
 //# sourceMappingURL=webcomponent-config.js.map
