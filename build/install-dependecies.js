@@ -26,7 +26,9 @@ const bundleDevDependencies = [
     'vamtiger-bash'
 ];
 const webComponentsDevDependecies = [
-    'vamtiger-browser-method@source'
+    'vamtiger-browser-method@source',
+    'vamtiger-copy-file',
+    'vamtiger-get-directory-content'
 ];
 exports.default = async (params) => {
     const { workingDirectory } = params;
