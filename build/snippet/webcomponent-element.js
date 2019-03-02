@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = require("lodash");
 exports.default = ({ name }) => `import {
     Selector
+    ObservedAttribute,
 } from './types';
 import getTemplate from './get-template';
 import {
@@ -35,7 +36,7 @@ export default class ${lodash_1.startCase(name).replace(' ', '')} extends HTMLEl
 
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(name: ObservedAttribute, oldValue: string, newValue: string) {
 
     }
 }`;

@@ -29,6 +29,8 @@ export interface IProperties {
 
 export type AttributesKey = keyof IAttributes;
 
+export type ObservedAttribute = keyof typeof ObservedAttributes;
+
 export type GetTemplate<P extends IGetTemplate> =
     P['selector'] extends Selector.style ? HTMLStyleElement :
     null;`;
