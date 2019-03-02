@@ -10,8 +10,8 @@ const { cwd } = process;
 const folder = path_1.resolve(cwd(), 'source');
 const elementPath = path_1.resolve(folder, 'element.ts');
 const configPath = path_1.resolve(folder, 'config.ts');
-const getTemplatePath = path_1.resolve(folder, 'config.ts');
-const typesPath = path_1.resolve(folder, 'config.ts');
+const getTemplatePath = path_1.resolve(folder, 'get-template.ts');
+const typesPath = path_1.resolve(folder, 'types.ts');
 async function default_1({ packagePath }) {
     const { name } = require(packagePath);
     await Promise.all([

@@ -12,7 +12,7 @@ import {
 
 export const name = '${lodash_1.kebabCase(name)}';
 
-export default class ${lodash_1.startCase(name)} extends HTMLElement {
+export default class ${lodash_1.startCase(name).replace(' ', '')} extends HTMLElement {
     constructor() {
         super();
 
