@@ -34,8 +34,6 @@ export default ({ name }: IGetWebComponentTestHtml) => `<!DOCTYPE html>
             </header>
         </section>
 
-        <${name}
-            data-jsonld="image.json"
-        ></${name}>
+        <${name}></${name}>
     </body>
 </html>`;

@@ -73,7 +73,7 @@ export default async () => {
             createWebcomponentTestHtml({ packagePath: projectPackage }),
             createWebComponentHtml(),
             createWebComponentCss(),
-            createWebComponentElement(),
+            createWebComponentElement({ packagePath: projectPackage }),
             createWebComponentRoot({ packagePath: projectPackage })
         ]);
     }

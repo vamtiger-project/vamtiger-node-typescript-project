@@ -1,6 +1,6 @@
 import { resolve as resolvePath } from 'path';
-import createFolder from 'vamtiger-create-directory';
 import createFile from 'vamtiger-create-file';
+import webcomponentSnippet from './snippet/webcomponent';
 
 const { cwd } = process;
 const folder = resolvePath(
@@ -15,7 +15,7 @@ export default async function({ packagePath }: IParams) {
         name
     );
 
-    await createFile(filePath, '');
+    await createFile(filePath, webcomponentSnippet);
 }
 
 export interface IParams {

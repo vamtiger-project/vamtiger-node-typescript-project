@@ -4,7 +4,7 @@ import Args from 'vamtiger-argv/build/main';
 import {
     CommandlineArgument,
     ShortCommandlineArgument
-} from '../types';
+} from './types';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)

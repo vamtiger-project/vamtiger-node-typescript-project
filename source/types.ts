@@ -1,8 +1,10 @@
 export enum CommandlineArgument {
+    bundle = 'bundle',
     webComponent = 'webComponent'
 }
 
 export enum ShortCommandlineArgument {
+    bundle = 'b',
     webComponent = 'w'
 };
 

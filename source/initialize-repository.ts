@@ -6,11 +6,11 @@ export default (params: Params) => {
         cwd: workingDirectory
     };
     const initializeRepository = 'git init';
-    
+
     console.log(initializeRepository);
-    
+
     return bash(
-        'git init', 
+        'git init',
         bashOptions
     );
 }

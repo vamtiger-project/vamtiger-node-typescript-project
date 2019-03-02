@@ -1,7 +1,12 @@
 import bash from 'vamtiger-bash';
 import Args from 'vamtiger-argv/build/main';
+import { CommandlineArgument, ShortCommandlineArgument } from './types';
 
 const args = new Args();
+const webComponent = args.has(CommandlineArgument.webComponent)
+    || args.has(ShortCommandlineArgument.webComponent);
+const bundle = args.has(CommandlineArgument.bundle)
+    || args.has(ShortCommandlineArgument.bundle);
 const devDependencies = [
     '@types/node',
     'mocha',
@@ -13,16 +18,31 @@ const devDependencies = [
 ];
 const bundleDevDependencies = [
     'vamtiger-bundle-typescript',
-    'vamtiger-remove'
+    'vamtiger-bundle-css-next',
+    'vamtiger-bundle-html',
+    'vamtiger-remove',
+    'vamtiger-get-directory-content',
+    'vamtiger-bash'
 ];
+const webComponentsDevDependecies = [
+    'vamtiger-browser-method@source'
+]
 
 export default async (params: Params) => {
     const { workingDirectory } = params;
     const bashOptions = {
         cwd: workingDirectory
     };
-    const dependencies = (args.has('bundle') && devDependencies.concat(bundleDevDependencies) || devDependencies).join(' ');
+    const dependencies = devDependencies;
     const installDependencies = `npm install --save-dev ${dependencies}`;
+
+    if (bundle || webComponent) {
+        dependencies.push(...bundleDevDependencies);
+    }
+
+    if (webComponent) {
+        dependencies.push(...webComponentsDevDependecies);
+    }
 
     return bash(installDependencies, bashOptions)
         .then(console.log)
