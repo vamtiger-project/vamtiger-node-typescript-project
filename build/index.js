@@ -15,6 +15,7 @@ const create_web_component_html_1 = require("./create-web-component-html");
 const create_web_component_css_1 = require("./create-web-component-css");
 const create_web_component_element_1 = require("./create-web-component-element");
 const create_web_component_root_1 = require("./create-web-component-root");
+const gitignore_1 = require("./snippet/gitignore");
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent)
     || args.has(types_1.ShortCommandlineArgument.webComponent);
@@ -26,6 +27,7 @@ exports.default = async () => {
     const main = path_1.resolve(sourceFolder, 'index.ts');
     const projectPackage = path_1.resolve(workingDirectory, 'package.json');
     const tsconfigSource = path_1.resolve(__dirname, '..', 'tsconfig.json');
+    const gitIgnore = path_1.resolve(workingDirectory, '.gitignore');
     const tsconfigDestination = path_1.resolve(workingDirectory, path_1.basename(tsconfigSource));
     const tsconfig = {
         source: tsconfigSource,
@@ -39,7 +41,8 @@ exports.default = async () => {
         vamtiger_create_directory_1.default(testFolder),
         () => !webComponent && vamtiger_create_file_1.default(main, ''),
         install_dependecies_1.default({ workingDirectory }),
-        vamtiger_copy_file_1.default(tsconfig)
+        vamtiger_copy_file_1.default(tsconfig),
+        vamtiger_create_file_1.default(gitIgnore, gitignore_1.default)
     ]);
     if (webComponent) {
         await Promise.all([
