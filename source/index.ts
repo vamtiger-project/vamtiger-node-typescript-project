@@ -16,6 +16,7 @@ import createWebComponentHtml from './create-web-component-html';
 import createWebComponentCss from './create-web-component-css';
 import createWebComponentElement from './create-web-component-element';
 import createWebComponentRoot from './create-web-component-root';
+import gitIgnoreSnippet from './snippet/gitignore';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
@@ -45,6 +46,10 @@ export default async () => {
         '..',
         'tsconfig.json'
     );
+    const gitIgnore = resolvePath(
+        workingDirectory,
+        '.gitignore'
+    );
     const tsconfigDestination = resolvePath(
         workingDirectory,
         basename(tsconfigSource)
@@ -65,7 +70,8 @@ export default async () => {
         createDirectory(testFolder),
         () => !webComponent && createFile(main, ''),
         installDependecies({ workingDirectory }),
-        copyFile(tsconfig)
+        copyFile(tsconfig),
+        createFile(gitIgnore, gitIgnoreSnippet)
     ]);
 
     if (webComponent) {
