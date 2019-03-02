@@ -12,7 +12,7 @@ export default async function({ packagePath }: IParams) {
     const { name } = require(packagePath);
     const filePath = resolvePath(
         folder,
-        name
+        `${name}.ts`
     );
 
     await createFile(filePath, webcomponentSnippet);

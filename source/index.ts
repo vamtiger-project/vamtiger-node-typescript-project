@@ -63,7 +63,7 @@ export default async () => {
     await Promise.all([
         initializeRepository({ workingDirectory }),
         createDirectory(testFolder),
-        createFile(main, ''),
+        () => !webComponent && createFile(main, ''),
         installDependecies({ workingDirectory }),
         copyFile(tsconfig)
     ]);
