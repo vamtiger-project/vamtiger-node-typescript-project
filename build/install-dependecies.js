@@ -34,13 +34,15 @@ exports.default = async (params) => {
         cwd: workingDirectory
     };
     const dependencies = devDependencies;
-    const installDependencies = `npm install --save-dev ${dependencies}`;
+    let installDependencies;
     if (bundle || webComponent) {
         dependencies.push(...bundleDevDependencies);
     }
     if (webComponent) {
         dependencies.push(...webComponentsDevDependecies);
     }
+    installDependencies = `npm install --save-dev ${dependencies.join(' ')}`;
+    console.log(installDependencies);
     return vamtiger_bash_1.default(installDependencies, bashOptions)
         .then(console.log)
         .catch(error => console.warn(error));
