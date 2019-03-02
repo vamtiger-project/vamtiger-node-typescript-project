@@ -20,6 +20,10 @@ const htmlPath = resolvePath(
     folder,
     'test.html'
 );
+const cssPath = resolvePath(
+    folder,
+    'test.css'
+);
 const browserTest = resolvePath(
     testFolder,
     'browser.ts'
@@ -45,6 +49,7 @@ export default async function ({ packagePath }: ICreateWebComponentHtml) {
 
     await Promise.all([
         createFile(htmlPath, html),
+        createFile(cssPath, html),
         createFile(browserTest, browserTestSnippet),
         createFile(loadScriptTest, loadScriptTestSnippet({ name })),
         createFile(nodeScriptTest, nodeScriptTestSnippet),
