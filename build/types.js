@@ -2,10 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var CommandlineArgument;
 (function (CommandlineArgument) {
+    CommandlineArgument["bundle"] = "bundle";
     CommandlineArgument["webComponent"] = "webComponent";
 })(CommandlineArgument = exports.CommandlineArgument || (exports.CommandlineArgument = {}));
 var ShortCommandlineArgument;
 (function (ShortCommandlineArgument) {
+    ShortCommandlineArgument["bundle"] = "b";
     ShortCommandlineArgument["webComponent"] = "w";
 })(ShortCommandlineArgument = exports.ShortCommandlineArgument || (exports.ShortCommandlineArgument = {}));
 ;

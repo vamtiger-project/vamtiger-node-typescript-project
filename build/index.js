@@ -46,7 +46,7 @@ exports.default = async () => {
             create_web_component_test_html_1.default({ packagePath: projectPackage }),
             create_web_component_html_1.default(),
             create_web_component_css_1.default(),
-            create_web_component_element_1.default(),
+            create_web_component_element_1.default({ packagePath: projectPackage }),
             create_web_component_root_1.default({ packagePath: projectPackage })
         ]);
     }

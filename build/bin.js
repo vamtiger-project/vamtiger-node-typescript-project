@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const main_1 = require("vamtiger-argv/build/main");
 const vamtiger_get_directory_content_1 = require("vamtiger-get-directory-content");
-const __1 = require("..");
+const _1 = require(".");
 const workingDirectory = process.cwd();
 const args = new main_1.default();
 main().catch(handleError);
@@ -13,7 +13,7 @@ async function main() {
     if (ignore) {
         throw new Error("This project has already been created" /* alreadyCreated */);
     }
-    await __1.default();
+    await _1.default();
     if (!args.has('keepAlive'))
         process.exit();
 }
@@ -22,4 +22,4 @@ function handleError(error) {
     process.exit();
 }
 ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=bin.js.map

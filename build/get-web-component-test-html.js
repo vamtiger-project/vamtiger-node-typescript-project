@@ -34,9 +34,7 @@ exports.default = ({ name }) => `<!DOCTYPE html>
             </header>
         </section>
 
-        <${name}
-            data-jsonld="image.json"
-        ></${name}>
+        <${name}></${name}>
     </body>
 </html>`;
 //# sourceMappingURL=get-web-component-test-html.js.map

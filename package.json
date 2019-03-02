@@ -1,14 +1,14 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.19.1",
+  "version": "0.20.0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
   "repository": "https://github.com/vamtiger-project/vamtiger-node-typescript-project.git",
   "bin": {
-    "vamtigerNodeTypescriptProject": "build/bin/index.js",
-    "vamtiger-node-typescript-project": "build/bin/index.js",
-    "vamtiger-typescript-project": "build/bin/index.js"
+    "vamtigerNodeTypescriptProject": "build/bin.js",
+    "vamtiger-node-typescript-project": "build/bin.js",
+    "vamtiger-typescript-project": "build/bin.js"
   },
   "scripts": {
     "test": "npm run build && npm run mocha-test",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.6",
     "@types/js-beautify": "^0.0.31",
+    "@types/lodash": "^4.14.121",
     "@types/mocha": "^2.2.44",
     "@types/node": "^8.0.53",
     "chai": "^4.1.2",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "js-beautify": "^1.7.5",
+    "lodash": "^4.17.11",
     "vamtiger-argv": "^1.2.6",
     "vamtiger-bash": "^0.0.16",
     "vamtiger-copy-file": "^0.0.9",

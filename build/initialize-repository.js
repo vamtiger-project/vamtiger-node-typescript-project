@@ -10,4 +10,4 @@ exports.default = (params) => {
     console.log(initializeRepository);
     return vamtiger_bash_1.default('git init', bashOptions);
 };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=initialize-repository.js.map

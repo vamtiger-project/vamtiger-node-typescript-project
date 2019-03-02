@@ -12,4 +12,4 @@ exports.default = () => new Promise((resolve, reject) => {
     });
     prompt.on('close', resolve);
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=initialize-package.js.map

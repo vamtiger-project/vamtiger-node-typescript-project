@@ -1,7 +1,9 @@
 export declare enum CommandlineArgument {
+    bundle = "bundle",
     webComponent = "webComponent"
 }
 export declare enum ShortCommandlineArgument {
+    bundle = "b",
     webComponent = "w"
 }
 export declare enum CommandlineArgumentDescription {
