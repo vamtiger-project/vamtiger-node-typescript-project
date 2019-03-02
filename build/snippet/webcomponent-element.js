@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const lodash_1 = require("lodash");
 exports.default = ({ name }) => `import {
-    Selector
-    ObservedAttribute,
+    Selector,
+    ObservedAttribute
 } from './types';
 import getTemplate from './get-template';
 import {

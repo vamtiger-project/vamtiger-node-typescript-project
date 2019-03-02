@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = `import { ObservedAttribute } from './types'
+exports.default = `import {
+    ObservedAttributes,
+    ObservedAttribute
+} from './types'
 
 export const shadowRoot = {
     mode: 'open'
