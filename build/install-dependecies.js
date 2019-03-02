@@ -28,7 +28,8 @@ const bundleDevDependencies = [
 const webComponentsDevDependecies = [
     'vamtiger-browser-method@source',
     'vamtiger-copy-file',
-    'vamtiger-get-directory-content'
+    'vamtiger-get-directory-content',
+    'vamtiger-watch'
 ];
 exports.default = async (params) => {
     const { workingDirectory } = params;
