@@ -6,6 +6,7 @@ import getHtml from './get-web-component-test-html';
 import browserTestSnippet from './snippet/webcomponent-test-browser';
 import loadScriptTestSnippet from './snippet/webcomponent-test-load-script';
 import nodeScriptTestSnippet from './snippet/webcomponent-test-node';
+import generateTestSnippet from './snippet/webcomponent-test-generate';
 
 const { cwd } = process;
 const folder = resolvePath(
@@ -31,6 +32,10 @@ const nodeScriptTest = resolvePath(
     testFolder,
     'node.ts'
 );
+const generateScriptTest = resolvePath(
+    testFolder,
+    'generate.ts'
+);
 
 export default async function ({ packagePath }: ICreateWebComponentHtml) {
     const { name } = require(packagePath);
@@ -42,6 +47,7 @@ export default async function ({ packagePath }: ICreateWebComponentHtml) {
         createFile(htmlPath, html),
         createFile(browserTest, browserTestSnippet),
         createFile(loadScriptTest, loadScriptTestSnippet({ name })),
-        createFile(nodeScriptTest, nodeScriptTestSnippet)
+        createFile(nodeScriptTest, nodeScriptTestSnippet),
+        createFile(generateScriptTest, generateTestSnippet)
     ]);
 }
