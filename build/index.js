@@ -37,7 +37,7 @@ exports.default = async () => {
     await Promise.all([
         initialize_repository_1.default({ workingDirectory }),
         vamtiger_create_directory_1.default(testFolder),
-        vamtiger_create_file_1.default(main, ''),
+        () => !webComponent && vamtiger_create_file_1.default(main, ''),
         install_dependecies_1.default({ workingDirectory }),
         vamtiger_copy_file_1.default(tsconfig)
     ]);

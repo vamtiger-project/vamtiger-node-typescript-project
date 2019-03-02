@@ -7,7 +7,7 @@ const { cwd } = process;
 const folder = path_1.resolve(cwd(), 'source');
 async function default_1({ packagePath }) {
     const { name } = require(packagePath);
-    const filePath = path_1.resolve(folder, name);
+    const filePath = path_1.resolve(folder, `${name}.ts`);
     await vamtiger_create_file_1.default(filePath, webcomponent_1.default);
 }
 exports.default = default_1;
