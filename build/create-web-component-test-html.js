@@ -23,7 +23,7 @@ async function default_1({ packagePath }) {
     await vamtiger_create_directory_1.default(folder);
     await Promise.all([
         vamtiger_create_file_1.default(htmlPath, html),
-        vamtiger_create_file_1.default(cssPath, html),
+        vamtiger_create_file_1.default(cssPath, ''),
         vamtiger_create_file_1.default(browserTest, webcomponent_test_browser_1.default),
         vamtiger_create_file_1.default(loadScriptTest, webcomponent_test_load_script_1.default({ name })),
         vamtiger_create_file_1.default(nodeScriptTest, webcomponent_test_node_1.default),

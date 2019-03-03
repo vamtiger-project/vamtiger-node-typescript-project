@@ -6,7 +6,7 @@ const vamtiger_create_file_1 = require("vamtiger-create-file");
 const export_empty_string_1 = require("./snippet/export-empty-string");
 const { cwd } = process;
 const folder = path_1.resolve(cwd(), 'source', 'html');
-const htmlPath = path_1.resolve(folder, 'inxex.html');
+const htmlPath = path_1.resolve(folder, 'index.html');
 const modulePath = path_1.resolve(folder, 'index.ts');
 async function default_1() {
     await vamtiger_create_directory_1.default(folder);
