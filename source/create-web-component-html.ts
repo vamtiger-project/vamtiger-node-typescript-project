@@ -11,7 +11,7 @@ const folder = resolvePath(
 );
 const htmlPath = resolvePath(
     folder,
-    'inxex.html'
+    'index.html'
 );
 const modulePath = resolvePath(
     folder,

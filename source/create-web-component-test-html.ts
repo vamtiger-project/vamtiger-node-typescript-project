@@ -49,7 +49,7 @@ export default async function ({ packagePath }: ICreateWebComponentHtml) {
 
     await Promise.all([
         createFile(htmlPath, html),
-        createFile(cssPath, html),
+        createFile(cssPath, ''),
         createFile(browserTest, browserTestSnippet),
         createFile(loadScriptTest, loadScriptTestSnippet({ name })),
         createFile(nodeScriptTest, nodeScriptTestSnippet),
