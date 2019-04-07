@@ -15,6 +15,9 @@ var CommandlineArgumentDescription;
 (function (CommandlineArgumentDescription) {
     CommandlineArgumentDescription["webComponent"] = "Create Web Component Project";
 })(CommandlineArgumentDescription = exports.CommandlineArgumentDescription || (exports.CommandlineArgumentDescription = {}));
+var DataAttribute;
+(function (DataAttribute) {
+})(DataAttribute = exports.DataAttribute || (exports.DataAttribute = {}));
 exports.commandlineArgumentDescription = {
     webComponent: CommandlineArgumentDescription.webComponent,
     w: CommandlineArgumentDescription.webComponent

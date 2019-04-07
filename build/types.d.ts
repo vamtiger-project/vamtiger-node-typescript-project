@@ -9,6 +9,8 @@ export declare enum ShortCommandlineArgument {
 export declare enum CommandlineArgumentDescription {
     webComponent = "Create Web Component Project"
 }
+export declare enum DataAttribute {
+}
 export interface IGetWebComponentScripts {
     name: string;
 }
@@ -17,6 +19,17 @@ export interface IGetWebComponentTestHtml {
 }
 export interface ICreateWebComponentHtml {
     packagePath: string;
+}
+export interface IAttributes {
+    id?: string;
+    for?: string;
+    slot?: string;
+}
+export interface IProperties {
+    innerHTML?: string;
+    name?: string;
+}
+export interface IDataset extends DOMStringMap {
 }
 export declare const commandlineArgumentDescription: {
     webComponent: CommandlineArgumentDescription;
