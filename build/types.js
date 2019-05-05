@@ -4,16 +4,20 @@ var CommandlineArgument;
 (function (CommandlineArgument) {
     CommandlineArgument["bundle"] = "bundle";
     CommandlineArgument["webComponent"] = "webComponent";
+    CommandlineArgument["jsonLd"] = "json-ld";
 })(CommandlineArgument = exports.CommandlineArgument || (exports.CommandlineArgument = {}));
 var ShortCommandlineArgument;
 (function (ShortCommandlineArgument) {
     ShortCommandlineArgument["bundle"] = "b";
     ShortCommandlineArgument["webComponent"] = "w";
+    ShortCommandlineArgument["jsonLd"] = "j";
 })(ShortCommandlineArgument = exports.ShortCommandlineArgument || (exports.ShortCommandlineArgument = {}));
 ;
 var CommandlineArgumentDescription;
 (function (CommandlineArgumentDescription) {
+    CommandlineArgumentDescription["bundle"] = "Bundle Project";
     CommandlineArgumentDescription["webComponent"] = "Create Web Component Project";
+    CommandlineArgumentDescription["jsonLd"] = "Create Javascript Object Notation for Linked Data Project";
 })(CommandlineArgumentDescription = exports.CommandlineArgumentDescription || (exports.CommandlineArgumentDescription = {}));
 var DataAttribute;
 (function (DataAttribute) {
