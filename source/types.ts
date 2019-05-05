@@ -1,15 +1,19 @@
 export enum CommandlineArgument {
     bundle = 'bundle',
-    webComponent = 'webComponent'
+    webComponent = 'webComponent',
+    jsonLd = 'json-ld'
 }
 
 export enum ShortCommandlineArgument {
     bundle = 'b',
-    webComponent = 'w'
+    webComponent = 'w',
+    jsonLd = 'j'
 };
 
 export enum CommandlineArgumentDescription {
-    webComponent = 'Create Web Component Project'
+    bundle = 'Bundle Project',
+    webComponent = 'Create Web Component Project',
+    jsonLd = 'Create Javascript Object Notation for Linked Data Project'
 }
 
 export enum DataAttribute {

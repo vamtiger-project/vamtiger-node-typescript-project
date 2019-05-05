@@ -16,11 +16,15 @@ import createWebComponentHtml from './create-web-component-html';
 import createWebComponentCss from './create-web-component-css';
 import createWebComponentElement from './create-web-component-element';
 import createWebComponentRoot from './create-web-component-root';
+import createJsonLdScript from './create-json-ld-script';
+import createJsonLd from './create-json-ld';
 import gitIgnoreSnippet from './snippet/gitignore';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
     || args.has(ShortCommandlineArgument.webComponent);
+const jsonLd = args.has(CommandlineArgument.jsonLd)
+    || args.has(ShortCommandlineArgument.jsonLd);
 
 export default async () => {
     const workingDirectory = process.cwd();
@@ -81,6 +85,11 @@ export default async () => {
             createWebComponentCss(),
             createWebComponentElement({ packagePath: projectPackage }),
             createWebComponentRoot({ packagePath: projectPackage })
+        ]);
+    } else if (jsonLd) {
+        await Promise.all([
+            createJsonLdScript({ packagePath: projectPackage }),
+            createJsonLd()
         ]);
     }
 
