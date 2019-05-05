@@ -5,6 +5,8 @@ import { CommandlineArgument, ShortCommandlineArgument } from './types';
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
     || args.has(ShortCommandlineArgument.webComponent);
+const jsonLd = args.has(CommandlineArgument.jsonLd)
+    || args.has(ShortCommandlineArgument.jsonLd);
 const bundle = args.has(CommandlineArgument.bundle)
     || args.has(ShortCommandlineArgument.bundle);
 const devDependencies = [
@@ -30,6 +32,9 @@ const webComponentsDevDependecies = [
     'vamtiger-get-directory-content',
     'vamtiger-watch'
 ]
+const jsonDevDependecies = [
+    'vamtiger-browser-method'
+]
 
 export default async (params: Params) => {
     const { workingDirectory } = params;
@@ -46,6 +51,10 @@ export default async (params: Params) => {
 
     if (webComponent) {
         dependencies.push(...webComponentsDevDependecies);
+    }
+
+    if (jsonLd) {
+        dependencies.push(...jsonDevDependecies);
     }
 
     installDependencies = `npm install --save-dev ${dependencies.join(' ')}`;
