@@ -6,6 +6,8 @@ const types_1 = require("./types");
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent)
     || args.has(types_1.ShortCommandlineArgument.webComponent);
+const jsonLd = args.has(types_1.CommandlineArgument.jsonLd)
+    || args.has(types_1.ShortCommandlineArgument.jsonLd);
 const bundle = args.has(types_1.CommandlineArgument.bundle)
     || args.has(types_1.ShortCommandlineArgument.bundle);
 const devDependencies = [
@@ -31,6 +33,9 @@ const webComponentsDevDependecies = [
     'vamtiger-get-directory-content',
     'vamtiger-watch'
 ];
+const jsonDevDependecies = [
+    'vamtiger-browser-method'
+];
 exports.default = async (params) => {
     const { workingDirectory } = params;
     const bashOptions = {
@@ -43,6 +48,9 @@ exports.default = async (params) => {
     }
     if (webComponent) {
         dependencies.push(...webComponentsDevDependecies);
+    }
+    if (jsonLd) {
+        dependencies.push(...jsonDevDependecies);
     }
     installDependencies = `npm install --save-dev ${dependencies.join(' ')}`;
     console.log(installDependencies);
