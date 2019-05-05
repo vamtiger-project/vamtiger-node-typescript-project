@@ -31,4 +31,4 @@ async function default_1({ packagePath }) {
     ]);
 }
 exports.default = default_1;
-//# sourceMappingURL=create-web-component-test-html.js.map
+//# sourceMappingURL=create-browser-test.js.map

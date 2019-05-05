@@ -10,7 +10,7 @@ const initialize_repository_1 = require("./initialize-repository");
 const initialize_package_1 = require("./initialize-package");
 const update_package_1 = require("./update-package");
 const install_dependecies_1 = require("./install-dependecies");
-const create_web_component_test_html_1 = require("./create-web-component-test-html");
+const create_browser_test_1 = require("./create-browser-test");
 const create_web_component_html_1 = require("./create-web-component-html");
 const create_web_component_css_1 = require("./create-web-component-css");
 const create_web_component_element_1 = require("./create-web-component-element");
@@ -50,7 +50,7 @@ exports.default = async () => {
     ]);
     if (webComponent) {
         await Promise.all([
-            create_web_component_test_html_1.default({ packagePath: projectPackage }),
+            create_browser_test_1.default({ packagePath: projectPackage }),
             create_web_component_html_1.default(),
             create_web_component_css_1.default(),
             create_web_component_element_1.default({ packagePath: projectPackage }),
@@ -59,6 +59,7 @@ exports.default = async () => {
     }
     else if (jsonLd) {
         await Promise.all([
+            create_browser_test_1.default({ packagePath: projectPackage }),
             create_json_ld_script_1.default({ packagePath: projectPackage }),
             create_json_ld_1.default()
         ]);
