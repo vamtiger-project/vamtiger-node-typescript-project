@@ -11,7 +11,7 @@ import initializeRepository from './initialize-repository';
 import initializePackage from './initialize-package';
 import updatePackage from './update-package';
 import installDependecies from './install-dependecies';
-import createWebcomponentTestHtml from './create-web-component-test-html';
+import createBrowserTest from './create-browser-test';
 import createWebComponentHtml from './create-web-component-html';
 import createWebComponentCss from './create-web-component-css';
 import createWebComponentElement from './create-web-component-element';
@@ -80,7 +80,7 @@ export default async () => {
 
     if (webComponent) {
         await Promise.all([
-            createWebcomponentTestHtml({ packagePath: projectPackage }),
+            createBrowserTest({ packagePath: projectPackage }),
             createWebComponentHtml(),
             createWebComponentCss(),
             createWebComponentElement({ packagePath: projectPackage }),
@@ -88,6 +88,7 @@ export default async () => {
         ]);
     } else if (jsonLd) {
         await Promise.all([
+            createBrowserTest({ packagePath: projectPackage }),
             createJsonLdScript({ packagePath: projectPackage }),
             createJsonLd()
         ]);
