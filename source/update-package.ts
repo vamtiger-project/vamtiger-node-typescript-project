@@ -56,7 +56,8 @@ export default async (params: Params) => {
         currentPackage.scripts['watch-browser-test'] = 'npm run bundle-browser-test -- --watch';
         currentPackage.scripts['watch-html'] = 'npm run bundle-html -- --watch';
         currentPackage.scripts['watch-css'] = 'npm run bundle-css -- --watch';
-        currentPackage.scripts.watch = 'vamtiger-watch --folder source --extension ts --script test --extension html --script bundle-html --extension css --script bundle-css';
+        currentPackage.scripts.watch = webComponent && 'vamtiger-watch --folder source --extension ts --script test --extension html --script bundle-html --extension css --script bundle-css'
+            || 'vamtiger-watch --folder source --extension ts --script test';
         currentPackage.scripts.serve = 'npm run test && cd build && python -m SimpleHTTPServer';
         currentPackage.scripts['install-source'] = 'npm i --save-dev vamtiger-browser-method@source';
     }
