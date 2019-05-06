@@ -8,7 +8,9 @@ import {
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
-args.has(ShortCommandlineArgument.webComponent);
+    args.has(ShortCommandlineArgument.webComponent);
+const jsonLd = args.has(CommandlineArgument.jsonLd)
+    || args.has(ShortCommandlineArgument.jsonLd);
 
 export default async (params: Params) => {
     const projectPackage = params.projectPackage;
@@ -33,7 +35,7 @@ export default async (params: Params) => {
         currentPackage.scripts['bundle-source'] = 'vamtiger-bundle-typescript --relativePath --entryFilePath source/index.ts --bundleFilePath build/index.js --format cjs --sourcemap true --copySourceMap --minify';
         currentPackage.scripts.bundle = 'npm test && npm run clean && npm run build && npm run bundle-source && npm run clean-bundle';
         currentPackage.scripts.watch = 'npm run bundle -- --watch';
-    } else if (webComponent) {
+    } else if (webComponent || jsonLd) {
         currentPackage.scripts.test = 'npm run clean && npm run build && npm run bundle-node-test && npm run bundle-browser-test && npm run mocha && npm run bundle-source';
         currentPackage.scripts.mocha = 'mocha build/test/node --recursive';
         currentPackage.scripts.build = 'tsc';

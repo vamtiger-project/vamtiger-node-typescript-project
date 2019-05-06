@@ -49,7 +49,7 @@ export default async (params: Params) => {
         dependencies.push(...bundleDevDependencies);
     }
 
-    if (webComponent) {
+    if (webComponent || jsonLd) {
         dependencies.push(...webComponentsDevDependecies);
     }
 
