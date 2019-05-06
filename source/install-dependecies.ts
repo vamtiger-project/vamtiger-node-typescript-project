@@ -42,7 +42,7 @@ export default async (params: Params) => {
 
     let installDependencies: string;
 
-    if (bundle || webComponent) {
+    if (bundle || webComponent || jsonLd) {
         dependencies.push(...bundleDevDependencies);
     }
 
