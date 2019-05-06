@@ -4,8 +4,11 @@ export interface IParams {
     name: string;
 }
 
-export default ({name}: IParams) => `import loadScript from '../../node_modules/vamtiger-browser-method/source/load-script';
+export default ({name}: IParams) => `import * as VBM from 'vamtiger-browser-method/build/types';
 import { expect } from 'chai';
+
+const { VamtigerBrowserMethod } = window;
+const { loadScript } = VamtigerBrowserMethod;
 
 export default () => describe('${kebabCase(name)}', function () {
     before(async function () {
