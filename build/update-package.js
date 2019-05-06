@@ -7,6 +7,8 @@ const types_1 = require("./types");
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent);
 args.has(types_1.ShortCommandlineArgument.webComponent);
+const jsonLd = args.has(types_1.CommandlineArgument.jsonLd)
+    || args.has(types_1.ShortCommandlineArgument.jsonLd);
 exports.default = async (params) => {
     const projectPackage = params.projectPackage;
     const currentPackage = require(projectPackage);
@@ -27,7 +29,7 @@ exports.default = async (params) => {
         currentPackage.scripts.bundle = 'npm test && npm run clean && npm run build && npm run bundle-source && npm run clean-bundle';
         currentPackage.scripts.watch = 'npm run bundle -- --watch';
     }
-    else if (webComponent) {
+    else if (webComponent || jsonLd) {
         currentPackage.scripts.test = 'npm run clean && npm run build && npm run bundle-node-test && npm run bundle-browser-test && npm run mocha && npm run bundle-source';
         currentPackage.scripts.mocha = 'mocha build/test/node --recursive';
         currentPackage.scripts.build = 'tsc';

@@ -46,7 +46,7 @@ exports.default = async (params) => {
     if (bundle || webComponent) {
         dependencies.push(...bundleDevDependencies);
     }
-    if (webComponent) {
+    if (webComponent || jsonLd) {
         dependencies.push(...webComponentsDevDependecies);
     }
     if (jsonLd) {
