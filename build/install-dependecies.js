@@ -40,7 +40,7 @@ exports.default = async (params) => {
     };
     const dependencies = devDependencies;
     let installDependencies;
-    if (bundle || webComponent) {
+    if (bundle || webComponent || jsonLd) {
         dependencies.push(...bundleDevDependencies);
     }
     if (webComponent || jsonLd) {
