@@ -28,13 +28,10 @@ const bundleDevDependencies = [
     'vamtiger-bash'
 ];
 const webComponentsDevDependecies = [
-    'vamtiger-browser-method@source',
+    'vamtiger-browser-method',
     'vamtiger-copy-file',
     'vamtiger-get-directory-content',
     'vamtiger-watch'
-];
-const jsonDevDependecies = [
-    'vamtiger-browser-method'
 ];
 exports.default = async (params) => {
     const { workingDirectory } = params;
@@ -48,9 +45,6 @@ exports.default = async (params) => {
     }
     if (webComponent || jsonLd) {
         dependencies.push(...webComponentsDevDependecies);
-    }
-    if (jsonLd) {
-        dependencies.push(...jsonDevDependecies);
     }
     installDependencies = `npm install --save-dev ${dependencies.join(' ')}`;
     console.log(installDependencies);
