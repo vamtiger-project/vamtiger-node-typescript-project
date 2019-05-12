@@ -19,7 +19,7 @@ import createWebComponentRoot from './create-web-component-root';
 import createJsonLdScript from './create-json-ld-script';
 import createJsonLd from './create-json-ld';
 import gitIgnoreSnippet from './snippet/gitignore';
-import createJsonLdTypes from './create-json-ld-load-script';
+import createJsonLdTypes from './create-json-ld-types';
 import createJsonLdLoadScript from './create-json-ld-load-script';
 import createJsonLdJson from './create-json-ls-json';
 
