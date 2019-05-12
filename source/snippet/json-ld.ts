@@ -1,4 +1,8 @@
-export default `export default {
+export default `const jsonLd = {
     '@context': 'http://schema.org/',
-    '@type': '',
-};`;
+    '@type': 'Painting',
+};
+
+export default [
+    jsonLd
+];`

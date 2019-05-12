@@ -19,6 +19,9 @@ import createWebComponentRoot from './create-web-component-root';
 import createJsonLdScript from './create-json-ld-script';
 import createJsonLd from './create-json-ld';
 import gitIgnoreSnippet from './snippet/gitignore';
+import createJsonLdTypes from './create-json-ld-load-script';
+import createJsonLdLoadScript from './create-json-ld-load-script';
+import createJsonLdJson from './create-json-ls-json';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
@@ -90,7 +93,10 @@ export default async () => {
         await Promise.all([
             createBrowserTest({ packagePath: projectPackage }),
             createJsonLdScript({ packagePath: projectPackage }),
-            createJsonLd()
+            createJsonLd(),
+            createJsonLdTypes({ packagePath: projectPackage }),
+            createJsonLdLoadScript({ packagePath: projectPackage }),
+            createJsonLdJson()
         ]);
     }
 

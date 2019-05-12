@@ -1,11 +1,25 @@
-export default `import jsonLd from './json-ld';
-const { stringify } = JSON;
-const { head } = document;
-const jsonLdScript = document.createElement('script');
+export default `import {
+    ScriptType,
+    url
+} from './types';
+import jsonLd from './json-ld';
+import json from './json';
+import loadScript from './load-script';
 
-jsonLdScript.type = 'application/ld+json';
-jsonLdScript.dataset.jsonLd = 'test/json-ld.js';
-jsonLdScript.innerHTML = stringify(jsonLd);
+const jsonLdParams = jsonLd.map(data => ({
+    url,
+    type: ScriptType.jsonLd,
+    data
+}));
+const jsonParams = {
+    url,
+    type: ScriptType.json,
+    data: json
+};
+const scriptParams = [
+    ...jsonLdParams,
+    jsonParams
+];
 
-head.appendChild(jsonLdScript);
+scriptParams.forEach(loadScript);
 `;
