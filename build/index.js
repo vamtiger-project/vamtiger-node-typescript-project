@@ -18,8 +18,8 @@ const create_web_component_root_1 = require("./create-web-component-root");
 const create_json_ld_script_1 = require("./create-json-ld-script");
 const create_json_ld_1 = require("./create-json-ld");
 const gitignore_1 = require("./snippet/gitignore");
+const create_json_ld_types_1 = require("./create-json-ld-types");
 const create_json_ld_load_script_1 = require("./create-json-ld-load-script");
-const create_json_ld_load_script_2 = require("./create-json-ld-load-script");
 const create_json_ls_json_1 = require("./create-json-ls-json");
 const args = new main_1.default();
 const webComponent = args.has(types_1.CommandlineArgument.webComponent)
@@ -65,8 +65,8 @@ exports.default = async () => {
             create_browser_test_1.default({ packagePath: projectPackage }),
             create_json_ld_script_1.default({ packagePath: projectPackage }),
             create_json_ld_1.default(),
+            create_json_ld_types_1.default({ packagePath: projectPackage }),
             create_json_ld_load_script_1.default({ packagePath: projectPackage }),
-            create_json_ld_load_script_2.default({ packagePath: projectPackage }),
             create_json_ls_json_1.default()
         ]);
     }
