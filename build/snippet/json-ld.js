@@ -1,7 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = `export default {
+exports.default = `const jsonLd = {
     '@context': 'http://schema.org/',
-    '@type': '',
-};`;
+    '@type': 'Painting',
+};
+
+export default [
+    jsonLd
+];`;
 //# sourceMappingURL=json-ld.js.map

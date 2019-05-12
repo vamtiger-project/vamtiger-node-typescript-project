@@ -1,0 +1,2 @@
+declare const _default: "import {\n    ILoadScript\n} from './types';\n\nconst { stringify } = JSON;\n\nexport default function({ type, url: jsonLd, data: currentData }: ILoadScript) {\n    const { head } = document;\n    const script = document.createElement('script');\n    const data = Object.keys(currentData).length && currentData;\n\n    script.type = type;\n\n    script.dataset.jsonLd = jsonLd;\n\n    if (data) {\n        script.innerHTML = stringify(data).trim();\n    }\n\n    script.innerHTML && head.appendChild(script);\n}";
+export default _default;
