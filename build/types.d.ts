@@ -15,6 +15,9 @@ export declare enum CommandlineArgumentDescription {
 }
 export declare enum DataAttribute {
 }
+export declare enum BrowserTarget {
+    'es2015' = 0
+}
 export interface IGetWebComponentScripts {
     name: string;
 }
@@ -34,6 +37,9 @@ export interface IProperties {
     name?: string;
 }
 export interface IDataset extends DOMStringMap {
+}
+export interface IUpdateTsConfigForBrowser {
+    path: string;
 }
 export declare const commandlineArgumentDescription: {
     webComponent: CommandlineArgumentDescription;

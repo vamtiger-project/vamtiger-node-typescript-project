@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.51.1",
+  "version": "0.52.0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
@@ -40,8 +40,8 @@
     "vamtiger-argv": "^1.2.6",
     "vamtiger-bash": "^0.0.16",
     "vamtiger-copy-file": "^0.0.9",
-    "vamtiger-create-directory": "latest",
-    "vamtiger-create-file": "^0.0.7",
+    "vamtiger-create-directory": "0.0.5",
+    "vamtiger-create-file": "0.0.7",
     "vamtiger-get-directory-content": "^0.0.31"
   }
 }

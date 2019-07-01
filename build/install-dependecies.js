@@ -25,7 +25,8 @@ const bundleDevDependencies = [
     'vamtiger-bundle-html',
     'vamtiger-remove',
     'vamtiger-get-directory-content',
-    'vamtiger-bash'
+    'vamtiger-bash',
+    'vamtiger-bundle-text'
 ];
 const webComponentsDevDependecies = [
     'vamtiger-browser-method',
