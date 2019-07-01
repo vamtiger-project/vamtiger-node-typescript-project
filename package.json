@@ -14,7 +14,7 @@
     "test": "npm run build && npm run mocha-test",
     "mocha-test": "mocha build/test --recursive --timeout 300000 --keepAlive",
     "build": "rm -rf build/*; tsc",
-    "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig"
+    "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig --publishSource"
   },
   "keywords": [
     "node.js",
