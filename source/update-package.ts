@@ -51,6 +51,7 @@ export default async (params: Params) => {
         currentPackage.scripts['bundle-css'] = 'npm run bundle-shadow-css && npm run bundle-document-css';
         currentPackage.scripts['bundle-shadow-css'] = 'vamtiger-bundle-css-next --relativePath --entryFilePath source/css/index.css --bundleFilePath source/css/index.ts --sourcemap inline';
         currentPackage.scripts['bundle-document-css'] = 'vamtiger-bundle-css-next --relativePath --entryFilePath source/css/document-index.css --bundleFilePath source/css/document-index.ts --sourcemap inline';
+        currentPackage.scripts['bundle-text'] = "vamtiger-bundle-text --folder source/text --filter txt$ --name index",
         currentPackage.scripts['watch-source'] = 'npm run bundle-source -- --watch';
         currentPackage.scripts['watch-node-test'] = 'npm run bundle-node-test -- --watch';
         currentPackage.scripts['watch-browser-test'] = 'npm run bundle-browser-test -- --watch';

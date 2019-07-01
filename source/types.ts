@@ -20,6 +20,10 @@ export enum DataAttribute {
 
 }
 
+export enum BrowserTarget {
+    'es2015'
+}
+
 export interface IGetWebComponentScripts {
     name: string;
 }
@@ -45,6 +49,10 @@ export interface IProperties {
 
 export interface IDataset extends DOMStringMap {
 
+}
+
+export interface IUpdateTsConfigForBrowser {
+    path: string;
 }
 
 export const commandlineArgumentDescription = {

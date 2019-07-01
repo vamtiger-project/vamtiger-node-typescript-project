@@ -22,6 +22,7 @@ import gitIgnoreSnippet from './snippet/gitignore';
 import createJsonLdTypes from './create-json-ld-types';
 import createJsonLdLoadScript from './create-json-ld-load-script';
 import createJsonLdJson from './create-json-ls-json';
+import updateTsConfigForBrowser from './update-ts-config-for-browser';
 
 const args = new Args();
 const webComponent = args.has(CommandlineArgument.webComponent)
@@ -87,7 +88,8 @@ export default async () => {
             createWebComponentHtml(),
             createWebComponentCss(),
             createWebComponentElement({ packagePath: projectPackage }),
-            createWebComponentRoot({ packagePath: projectPackage })
+            createWebComponentRoot({ packagePath: projectPackage }),
+            updateTsConfigForBrowser({ path: tsconfigDestination })
         ]);
     } else if (jsonLd) {
         await Promise.all([
@@ -96,7 +98,8 @@ export default async () => {
             createJsonLd(),
             createJsonLdTypes({ packagePath: projectPackage }),
             createJsonLdLoadScript({ packagePath: projectPackage }),
-            createJsonLdJson()
+            createJsonLdJson(),
+            updateTsConfigForBrowser({ path: tsconfigDestination })
         ]);
     }
 
