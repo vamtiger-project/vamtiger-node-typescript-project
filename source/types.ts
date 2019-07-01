@@ -21,7 +21,7 @@ export enum DataAttribute {
 }
 
 export enum BrowserTarget {
-    'es2015'
+    es2015 = 'es2015'
 }
 
 export interface IGetWebComponentScripts {
