@@ -16,7 +16,7 @@ export declare enum CommandlineArgumentDescription {
 export declare enum DataAttribute {
 }
 export declare enum BrowserTarget {
-    'es2015' = 0
+    es2015 = "es2015"
 }
 export interface IGetWebComponentScripts {
     name: string;

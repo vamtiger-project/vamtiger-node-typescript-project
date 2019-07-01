@@ -1,6 +1,6 @@
 {
   "name": "vamtiger-node-typescript-project",
-  "version": "0.53.1",
+  "version": "0.53.1-0",
   "description": "Creates a node.js typescript project.",
   "main": "build",
   "types": "build/index.d.ts",
@@ -14,7 +14,7 @@
     "test": "npm run build && npm run mocha-test",
     "mocha-test": "mocha build/test --recursive --timeout 300000 --keepAlive",
     "build": "rm -rf build/*; tsc",
-    "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig --publishSource"
+    "commit": "vamtigerNodeTypescriptCommit --push --publish --keepTsConfig"
   },
   "keywords": [
     "node.js",
