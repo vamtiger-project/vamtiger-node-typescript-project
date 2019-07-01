@@ -41,7 +41,8 @@
     "vamtiger-bash": "^0.0.16",
     "vamtiger-copy-file": "^0.0.9",
     "vamtiger-create-directory": "0.0.5",
-    "vamtiger-create-file": "0.0.7",
-    "vamtiger-get-directory-content": "^0.0.31"
+    "vamtiger-create-file": "0.0.10",
+    "vamtiger-get-directory-content": "^0.0.31",
+    "vamtiger-get-file-text": "0.0.6"
   }
 }
