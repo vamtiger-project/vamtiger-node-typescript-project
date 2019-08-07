@@ -13,4 +13,4 @@ export interface ILoadScript {
     data: IAnyObject;
 }
 
-export const url = 'https://unpkg.com/${name}';`;
+export const url = 'https://cdn.jsdelivr.net/npm/${name}';`;
