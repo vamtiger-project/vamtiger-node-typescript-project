@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = `import {
     CustomEventName,
-    HandleJsonLdAction,
-    url as key
-} from '../../types';
+    HandleJsonLdAction
+} from 'vamtiger-browser-method/build/types';
+import { url as key } from './types';
 import json from './json';
 
-const { vamtigerBrowserMethod: eventName } = CustomEventName;
-const { dequeue: action } = HandleJsonLdAction;
+const eventName = 'vamtiger-browser-method-dequeue' as CustomEventName.vamtigerBrowserMethod;
+const action = 'vamtiger-browser-method-dequeue' as HandleJsonLdAction.dequeue;
 const params = {
     key
 };
